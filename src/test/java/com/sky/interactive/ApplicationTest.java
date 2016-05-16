@@ -11,7 +11,7 @@ public class ApplicationTest {
         assertTrue(true);
     }
 
-    @Ignore
+    @Test
     public void failureTest() {
         assertTrue(false);
     }
