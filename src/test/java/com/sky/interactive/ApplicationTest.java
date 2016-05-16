@@ -9,4 +9,9 @@ public class ApplicationTest {
     public void successTest() {
         assertTrue(true);
     }
+
+    @Test
+    public void failureTest() {
+        assertTrue(false);
+    }
 }
