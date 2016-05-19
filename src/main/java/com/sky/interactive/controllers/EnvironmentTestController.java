@@ -9,8 +9,8 @@ public class EnvironmentTestController {
     @RequestMapping("/")
     public String index() {
         String output = "";
-        output+="file.environment.conf="+System.getenv("file.environment.conf")+"\n";
-        output+="file.log4j.configuration"+System.getenv("file.log4j.configuration");
+        output+="FILE_ENVIRONMENT_CONF="+System.getenv("file.environment.conf")+"\n";
+        output+="FILE_LOG4J_CONFIGURATION"+System.getenv("file.log4j.configuration");
         return output;
     }
 }
