@@ -14,8 +14,8 @@ public class EnvironmentTestController {
     public String index() {
         String output = "";
 
-        output+=ENVIRONMENT_CONF+"="+System.getenv(ENVIRONMENT_CONF)+"\n\n";
-        output+=LOG4J_CONF+"="+System.getenv(LOG4J_CONF);
+        output+=ENVIRONMENT_CONF+"="+System.getProperty(ENVIRONMENT_CONF)+"\n\n";
+        output+=LOG4J_CONF+"="+System.getProperty(LOG4J_CONF);
 
         output+="ENV:\n";
         for(String s: System.getenv().keySet()) {
