@@ -6,11 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EnvironmentTestController {
 
+    static final String ENVIRONMENT_CONF = "FILE_ENVIRONMENT_CONF";
+    static final String LOG4J_CONF = "FILE_LOG4J_CONFIGURATION";
+
     @RequestMapping("/")
     public String index() {
         String output = "";
-        output+="FILE_ENVIRONMENT_CONF="+System.getenv("file.environment.conf")+"\n";
-        output+="FILE_LOG4J_CONFIGURATION"+System.getenv("file.log4j.configuration");
+        output+=ENVIRONMENT_CONF+"="+System.getenv(ENVIRONMENT_CONF)+"\n";
+        output+=LOG4J_CONF+"="+System.getenv(LOG4J_CONF);
         return output;
     }
 }
