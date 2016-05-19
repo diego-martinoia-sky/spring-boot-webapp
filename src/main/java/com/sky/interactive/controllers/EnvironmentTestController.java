@@ -14,17 +14,20 @@ public class EnvironmentTestController {
     public String index() {
         String output = "";
 
-        output+="ENV:\n";
-        for(String s: System.getenv().keySet()) {
-            output+=s+" = "+System.getenv(s)+"\n";
-        }
+        output+=ENVIRONMENT_CONF+"="+System.getenv(ENVIRONMENT_CONF)+"\n\n";
+        output+=LOG4J_CONF+"="+System.getenv(LOG4J_CONF);
 
-        output+="\n\n\n";
-
-        output+="SYS:\n";
-        for(String s: System.getProperties().stringPropertyNames()) {
-            output+=s+" = "+System.getProperty(s)+"\n";
-        }
+//        output+="ENV:\n";
+//        for(String s: System.getenv().keySet()) {
+//            output+=s+" = "+System.getenv(s)+"\n";
+//        }
+//
+//        output+="\n\n\n";
+//
+//        output+="SYS:\n";
+//        for(String s: System.getProperties().stringPropertyNames()) {
+//            output+=s+" = "+System.getProperty(s)+"\n";
+//        }
 
         return output;
     }
