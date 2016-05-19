@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EnvironmentTestController {
 
-    static final String ENVIRONMENT_CONF = "FILE_ENVIRONMENT_CONF";
-    static final String LOG4J_CONF = "FILE_LOG4J_CONFIGURATION";
+    static final String ENVIRONMENT_CONF = "file.environment.conf";
+    static final String LOG4J_CONF = "file.log4j.configuration";
     static final String PATH = "PATH";
 
     @RequestMapping("/")
