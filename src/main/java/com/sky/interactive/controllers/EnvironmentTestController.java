@@ -13,9 +13,9 @@ public class EnvironmentTestController {
     @RequestMapping("/")
     public String index() {
         String output = "";
-        output+=ENVIRONMENT_CONF+"="+System.getenv(ENVIRONMENT_CONF)+"\n";
-        output+=LOG4J_CONF+"="+System.getenv(LOG4J_CONF)+"\n";
-        output+=PATH+"="+System.getenv(PATH);
+        output+=ENVIRONMENT_CONF+"="+System.getenv(ENVIRONMENT_CONF)+" "+System.getProperty(ENVIRONMENT_CONF)+"\n";
+        output+=LOG4J_CONF+"="+System.getenv(LOG4J_CONF)+" "+System.getProperty(LOG4J_CONF)+"\n";
+        output+=PATH+"="+System.getenv(PATH)+" "+System.getProperty(PATH);
         return output;
     }
 }
